@@ -1,0 +1,37 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+
+  "name": "Horizon Christian School Extension",
+    "description": "This extension will give students and teachers links to horizon sites",
+    "version": "1.9",
+    "background": {
+      "page": "bg.html",
+      "persistent": true
+    },
+    "browser_action": {
+     "default_icon": "android-chrome-512x512.png",
+     "default_popup": "popup.html"
+    },
+    "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }   
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
