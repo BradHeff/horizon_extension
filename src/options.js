@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'bootstrap/dist/css/bootstrap.css';
-import './views/Popup/assets/fonts/poppins.css';
-import App from './views/Popup/App';
+import App from './views/Options/App'
 
 ReactDOM.render(
   <React.StrictMode>
