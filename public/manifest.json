@@ -9,12 +9,6 @@
   "background": {
     "scripts": ["static/js/background.js"]
   },
-  "content_scripts": [{
-    "js": [ "static/js/content.js" ],
-    "matches": [
-      "http://*.horizon.sa.edu.au/*"
-    ]
-  }],
   "icons": {
     "192": "icon.png"
   },
