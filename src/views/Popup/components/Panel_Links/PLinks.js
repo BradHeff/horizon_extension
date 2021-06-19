@@ -25,60 +25,53 @@ const PLinks = (props) => {
         </div>
   );
 }
+const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*_-+=";
 export class Security extends React.Component {
     constructor() {
         super();
         this.state = {
-            strength: '',
+            strength: 'strong',
             value: ''
         }
     }
     generate = () => {
+        var characters = alpha
         switch (this.state.strength) {
+
             case 'strong':
-                var length = 8,
-                charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*.?!",
-                retVal = "";
-                for (var i = 0, n = charset.length; i < length; ++i) {
-                    retVal += charset.charAt(Math.floor(Math.random() * n));
-                }
-                this.setState({value: retVal})
+                characters += numbers;
+                characters += symbols;
                 break;
             case 'medium':
-                var length2 = 8,
-                charset2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-                retVal2 = "";
-                for (var i2 = 0, n2 = charset2.length; i2 < length2; ++i2) {
-                    retVal2 += charset2.charAt(Math.floor(Math.random() * n2));
-                }
-                console.log(this.state.strength + " | " + retVal2)
-                this.setState({value: retVal2})
+                characters += numbers;                
                 break;
-            case 'weak':
-                var length3 = 8,
-                charset3 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                retVal3 = "";
-                for (var i3 = 0, n3 = charset3.length; i3 < length3; ++i3) {
-                    retVal3 += charset3.charAt(Math.floor(Math.random() * n3));
-                }
-                this.setState({value: retVal3})
-                break;
-        
             default:
                 break;
         }
+        this.setState({value: this.generatePassword(8, characters)})
     }
+    generatePassword = (length, characters) => {
+        let password = "";
+        for (let i = 0; i < length; i++) {
+          password += characters.charAt(
+            Math.floor(Math.random() * characters.length)
+          );
+        }
+        return password;
+    };
     render() {
         // console.log(this.state.strength)
         return (
             <div className="position-relative p-2">
                 <div className="form-group">
                     <label htmlFor="password" className="form-label">Password</label>
-                    <input type="text" className="form-control" name="password" value={this.state.value} />
+                    <input type="text" className="form-control text-center" name="password" value={this.state.value} />
                 </div>
                 <div className="form-group d-flex justify-content-between w-100">
                     <div class="form-check form-check-inline">
-                        <input name="group1" type="radio" id="inline-radio-1" className="form-check-input" onChange={(e) => e.currentTarget.checked?this.setState({strength: 'strong'}):null}/>
+                        <input name="group1" type="radio" id="inline-radio-1" defaultChecked={true} className="form-check-input" onChange={(e) => e.currentTarget.checked?this.setState({strength: 'strong'}):null}/>
                         <label title="" for="inline-radio-1" class="form-check-label">Strong</label>
                     </div>
                     <div class="form-check form-check-inline">
