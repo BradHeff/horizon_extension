@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo2.png';
 
 const Panel = (props) => {
   return (
-        <div className="col-7 pr-0 position-relative p-3 text-center" style={{fontWeight: 300, fontSize: '12px'}}>
+        <div className="col-6 pr-0 position-relative p-3 text-center" style={{fontWeight: 300, fontSize: '12px'}}>
             <b style={{fontSize: '16px'}}>HCS Extension</b>
             <p className="mb-0">A transforming christian education for all</p>
             <div className="p-3">
