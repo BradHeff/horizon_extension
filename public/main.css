@@ -1,43 +1,69 @@
-.motions {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -o-animation-name: pulse;
-    -ms-animation-name: pulse;
-    animation-name: pulse;
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    -ms-animation-duration: 2s;
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    -ms-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+.motionsa {
+    -webkit-animation-name: breathing !important;
+    -moz-animation-name: breathing !important;
+    -o-animation-name: breathing !important;
+    -ms-animation-name: breathing !important;
+    animation-name: breathing !important;
+    -webkit-animation-duration: 5s !important;
+    -moz-animation-duration: 5s !important;
+    -o-animation-duration: 5s !important;
+    -ms-animation-duration: 5s !important;
+    animation-duration: 5s !important;
+    -webkit-animation-iteration-count: infinite !important;
+    -moz-animation-iteration-count: infinite !important;
+    -ms-animation-iteration-count: infinite !important;
+    -o-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+    -webkit-transition: all 0.3s ease-in-out !important;
+    -moz-transition: all 0.3s ease-in-out !important;
+    -o-transition: all 0.3s ease-in-out !important;
+    -ms-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
 }
-
-@keyframes pulse {
+@-webkit-keyframes breathing {
     0% {
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0);
-        transform: scale(0);        
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
     }
+  
+    25% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    60% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
     100% {
-        -webkit-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        -o-transform: scale(1.5);
-        transform: scale(1.5);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
     }
-}
+  }
+  
+  @keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    25% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    60% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    100% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
