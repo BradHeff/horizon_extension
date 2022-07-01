@@ -1,3 +1,4 @@
+var injected = false;
 
 chrome.tabs.onActivated.addListener(tab => {
     
@@ -11,13 +12,16 @@ chrome.tabs.onActivated.addListener(tab => {
                         chrome.tabs.insertCSS(null, {file: 'main.css'});
                         chrome.tabs.executeScript(null, {file: 'foreground.js'}, () => {
                             console.log("I injected")
+                            injected = true;
                         });        
                     }  
                 }
             }
             catch(err){
                 setTimeout(function() {
-                getActivatedTab();
+                    if (!injected) {
+                        getActivatedTab();
+                    }
                 },100);
             }
         })
