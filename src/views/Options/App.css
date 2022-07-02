@@ -38,3 +38,10 @@ code {
 .justify-content-even {
   justify-content: space-evenly;
 }
+
+.image-logo {
+  height: 200px;
+  position: relative;
+  display: flex;      
+  justify-content: center;
+}

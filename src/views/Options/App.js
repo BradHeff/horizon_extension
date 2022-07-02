@@ -3,7 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../Popup/assets/fonts/poppins.css';
 import { tabOptions } from '../Reducer/Action';
-
+import logo from './assets/images/logo.png'
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
@@ -27,7 +27,13 @@ class Options extends React.Component {
 
   render() {    
     return (
-      <form className='container' style={{paddingTop:'40px', paddingBottom: '40px', height:'60px', width:'100%'}}>
+      <div className='container' style={{paddingTop:'40px', paddingBottom: '40px', height:'60px', width:'100%'}}>
+        <div className='image-logo'>
+          <img src={logo} alt={logo} className='img-fluid' />
+        </div>
+        <div className='text-center'>
+          <p>Select the position to set default tab on the links</p>
+        </div>
         <div className="d-flex align-tiems-center justify-content-even">
           <div>
           <label>
@@ -42,7 +48,7 @@ class Options extends React.Component {
           </label>
           </div>
         </div>
-      </form>
+      </div>
     );
   }
 }

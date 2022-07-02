@@ -14,7 +14,14 @@ chrome.tabs.onActivated.addListener(tab => {
                             console.log("I injected")
                             injected = true;
                         });        
-                    }  
+                    }
+                    if(/^https:\/\/www\.youtube/.test(tabs[0].url) || /^https:\/\/youtube/.test(tabs[0].url)){
+                        chrome.tabs.insertCSS(null, {file: 'yt.css'});
+                        chrome.tabs.executeScript(null, {file: 'foreground.js'}, () => {
+                            console.log("I injected")
+                            injected = true;
+                        });        
+                    }
                 }
             }
             catch(err){

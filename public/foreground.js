@@ -13,3 +13,14 @@ if (img !== null){
     img.srcset = []
     img.classList.add('motionsa')
 }
+
+var yturl = chrome.extension.getURL('images/yt.png');
+var ytmini = document.querySelector(".style-scope .ytd-logo");
+console.log(ytmini)
+var newImage = document.createElement('img');
+newImage.setAttribute("src", yturl)
+newImage.setAttribute("alt", yturl)
+newImage.setAttribute("style", "pointer-events: none;display: block;width: 100%;height: 30px;")
+// newItem.innerHTML = 'src="'+yturl+'" alt="youtube logo"';
+
+ytmini.parentElement.replaceChild(newImage, ytmini);
