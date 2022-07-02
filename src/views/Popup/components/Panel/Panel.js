@@ -16,6 +16,7 @@ const Panel = (props) => {
             </div>
             <div className="text-center">
               <a className="btn btn-outline-secondary w-100" style={{borderRadius: '20px'}} href="mailto:support@horizon.sa.edu.au?subject=Application | Need Support&body=Hi Brad, can i get some help in room ?? please.">Request Support</a>
+              <a className="btn btn-outline-secondary w-100" style={{borderRadius: '20px'}} href={chrome.runtime.openOptionsPage()}>Open options</a>
             </div>
            
         </div>

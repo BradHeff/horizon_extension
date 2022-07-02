@@ -27,7 +27,7 @@ class Options extends React.Component {
 
   render() {    
     return (
-      <form style={{paddingTop:'40px', paddingBottom: '40px', height:'60px', width:'100%'}}>
+      <form className='container' style={{paddingTop:'40px', paddingBottom: '40px', height:'60px', width:'100%'}}>
         <div className="d-flex align-tiems-center justify-content-even">
           <div>
           <label>
