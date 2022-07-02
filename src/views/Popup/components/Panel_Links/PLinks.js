@@ -11,11 +11,11 @@ import csinschool from "../../assets/images/csinschool.png";
 const PLinks = (props) => {
   return (
         <div className="col-6 pl-0">
-            <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
-                <Tab eventKey="home" title="Student">
+            <Tabs defaultActiveKey={props.option} id="uncontrolled-tab-example">
+                <Tab eventKey="Students" title="Students">
                     <Student />
                 </Tab>
-                <Tab eventKey="teacher" title="Teachers">
+                <Tab eventKey="Teachers" title="Teachers">
                     <Teacher />       
                 </Tab>
                 {/* <Tab eventKey="security" title="Security">

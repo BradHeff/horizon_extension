@@ -1,6 +1,6 @@
 {
   "name": "horizon_ext",
-  "version": "0.4.3",
+  "version": "0.2.6",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -13,7 +13,10 @@
     "react-app-rewired": "^2.1.8",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.2"
+    "react-redux": "^8.0.2",
+    "react-scripts": "4.0.2",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

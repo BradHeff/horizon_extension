@@ -3,13 +3,21 @@ import './App.css'
 import Layout from './HOC/Layout';
 import Panel from './components/Panel/Panel';
 import PanelLinks from './components/Panel_Links/PLinks';
+var option = null
 
 class App extends React.Component {
+  
   render() {
+    option = localStorage.getItem('option')
+    if (option === null) {
+      option = "Students"
+      localStorage.setItem('option', option)
+    }
+    console.log(option)
     return (
       <Layout>
         <Panel />
-        <PanelLinks />
+        <PanelLinks option={option} />
       </Layout>
     );
   }

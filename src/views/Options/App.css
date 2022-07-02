@@ -30,3 +30,11 @@ code {
 .App-link {
   color: #61dafb;
 }
+
+.align-tiems-center {
+  align-items: center;
+}
+
+.justify-content-even {
+  justify-content: space-evenly;
+}
