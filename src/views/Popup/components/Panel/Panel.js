@@ -14,9 +14,9 @@ const Panel = (props) => {
               
               <p>This extension is designed for Horizon Christian School Students and teachers to make navigating to school sites easy and in 1 place.</p>
             </div>
-            <div className="text-center d-flex">
+            <div className="text-center">
               <a className="btn btn-outline-secondary mr-2" style={{borderRadius: '20px'}} href="mailto:support@horizon.sa.edu.au?subject=Application | Need Support&body=Hi Brad, can i get some help in room ?? please.">Request Support</a>
-              <a className="btn btn-outline-secondary" style={{borderRadius: '20px'}} href="chrome-extension://bekflalofhgamamdhpcoicgcphalobcp/options.html">Open options</a>
+              {/* <a className="btn btn-outline-secondary" style={{borderRadius: '20px'}} href="chrome-extension://bekflalofhgamamdhpcoicgcphalobcp/options.html">Open options</a> */}
             </div>
            
         </div>

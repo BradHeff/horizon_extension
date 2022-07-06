@@ -2,14 +2,13 @@
   "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
   "name": "Horizon Christian School Extension",
-  "version": "2.8",
+  "version": "2.9",
   "description": "This extension will give students and teachers links to horizon sites",
   "permissions": [
     "tabs",
     "https://www.google.com/*",
     "https://www.youtube.com/*",
-    "https://youtube.com/*",
-    "storage"    
+    "https://youtube.com/*"
   ],
   "background": {
     "scripts": ["static/js/background.js"]
